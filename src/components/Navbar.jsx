@@ -1,56 +1,16 @@
 import React from "react";
-import styled from "styled-components";
-
-const Section = styled.div`
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 3px;
-  width: 100%;
-  z-index: 10;
-`;
-
-const Nav = styled.nav`
-  display: flex;
-  gap: 0.25rem;
-  padding: 0.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 999px;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-`;
-
-const NavItem = styled.a`
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  border-radius: 999px;
-  color: rgba(255, 255, 255, 0.9); /* Базовый цвет текста */
-  transition: background-color 0.3s, color 0.3s;
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.7);
-    color: #1a202c; /* Цвет текста при наведении */
-  }
-
-  &.active {
-    background-color: #ffffff;
-    color: #1a202c; /* Цвет текста активного элемента */
-  }
-`;
 
 const Navbar = () => {
   return (
-    <Section>
-      <Nav>
-        <NavItem href="#home">Главная</NavItem>
-        <NavItem href="#projects">Проекты</NavItem>
-        <NavItem href="#info">Инфо</NavItem>
-        <NavItem href="#contacts" className="active">
-          Контакты
-        </NavItem>
-      </Nav>
-    </Section>
+      <div className="flex justify-center items-center fixed top-3 w-full z-10">
+          <nav className="flex gap-1 p-0.5 border border-white/15 rounded-full bg-white/10 backdrop-blur">
+              <a href="#home" className="nav-item">Главная</a>
+              <a href="#projects" className="nav-item">Клуб</a>
+              <a href="#info" className="nav-item">Рассчет</a>
+              <a href="#contacts"
+                 className="nav-item bg-orange-400 text-gray-900 hover:bg-white/70 hover:text-gray-900">Контакты</a>
+          </nav>
+      </div>
   );
 };
 

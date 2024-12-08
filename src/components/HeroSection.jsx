@@ -1,46 +1,109 @@
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import video1 from "../assets/video1.mp4";
-import video2 from "../assets/video2.mp4";
 
 const HeroSection = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const videoVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 1.5 } },
+  };
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.5 } },
+  };
+
+  const subTextVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 1 } },
+  };
+
   return (
-    <div className="flex flex-col items-center mt-6 lg:mt-20">
-      <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide">
-        Рекламный бизнес с
-        <span className="bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text">
-          {" "}
-            гарантированной аудиторией!
-        </span>
-      </h1>
-      <p className="mt-10 text-lg text-center text-neutral-500 max-w-4xl">
-        Станьте региональным представителем – привлекайте рекламодателей и поддерживайте участников клуба.
-      </p>
-      <div className="flex justify-center my-10">
-        <a
-          href="#"
-          className="bg-gradient-to-r from-orange-500 to-orange-800 py-3 px-4 mx-3 rounded-md"
-        >
-          Узнать условия сотрудничества
-        </a>
-      </div>
-      <div className="flex mt-10 justify-center">
+    <div
+      id="home"
+      className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden overflow-x-hidden"
+    >
+      {/* Фоновое видео с параллакс-эффектом */}
+      <motion.div
+        className="absolute inset-0 w-screen h-screen"
+        style={{
+          transform: `translateY(${scrollY * 0.8}px)`, // Эффект параллакса
+        }}
+        variants={videoVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <video
           autoPlay
           loop
           muted
-          className="rounded-lg w-1/2 border border-orange-700 shadow-sm shadow-orange-400 mx-2 my-4"
+          className="w-full h-full object-cover"
         >
           <source src={video1} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <video
-          autoPlay
-          loop
-          muted
-          className="rounded-lg w-1/2 border border-orange-700 shadow-sm shadow-orange-400 mx-2 my-4"
+      </motion.div>
+
+      {/* Затемнение всего видео */}
+      <div className="fixed inset-0 w-screen h-screen bg-black/50"></div>
+
+      {/* Затемнение по краям */}
+      <div className="fixed inset-0 w-screen h-screen bg-gradient-to-r from-black via-transparent to-black"></div>
+
+      {/* Размытие всего видео */}
+      <div className="fixed inset-0 w-screen h-screen bg-black/30 backdrop-blur-md"></div>
+
+      {/* Контент поверх видео */}
+      <div className="relative z-8 text-center p-4 sm:p-6">
+        <motion.h1
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-center tracking-wide text-white"
+          variants={textVariants}
+          initial="hidden"
+          animate="visible"
         >
-          <source src={video2} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          Готовый бизнес
+          <span className="bg-gradient-to-r from-orange-500 to-red-600 text-transparent bg-clip-text">
+            {" "}
+            без конкурентов
+          </span>
+        </motion.h1>
+        <motion.p
+          className="mt-6 sm:mt-8 md:mt-10 text-sm sm:text-md md:text-lg text-center text-neutral-200 max-w-xs sm:max-w-md md:max-w-4xl mx-auto"
+          variants={subTextVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          Доход от 200тыс руб/месяц с поддержкой
+          <span className="bg-gradient-to-r from-orange-500 to-red-600 text-transparent bg-clip-text">
+            {" "}
+            от государства?
+          </span>
+        </motion.p>
+
+        <motion.div
+          className="flex justify-center my-6 sm:my-8 md:my-10"
+          variants={subTextVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 1.5 }}
+        >
+          <a
+            href="#"
+            className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 sm:py-3 sm:px-4 md:px-6 md:py-4 mx-2 sm:mx-3 rounded-md text-sm sm:text-base md:text-lg text-white shadow-lg"
+          >
+            Заказать
+          </a>
+        </motion.div>
       </div>
     </div>
   );
