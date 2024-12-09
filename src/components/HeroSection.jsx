@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import video1 from "../assets/video1.mp4";
+import video1 from "../assets/video2.mp4";
 
 const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -31,11 +31,11 @@ const HeroSection = () => {
   return (
     <div
       id="home"
-      className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden overflow-x-hidden"
+      className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden"
     >
       {/* Фоновое видео с параллакс-эффектом */}
       <motion.div
-        className="absolute inset-0 w-screen h-screen"
+        className="absolute inset-0 w-full h-full"
         style={{
           transform: `translateY(${scrollY * 0.8}px)`, // Эффект параллакса
         }}
@@ -55,16 +55,16 @@ const HeroSection = () => {
       </motion.div>
 
       {/* Затемнение всего видео */}
-      <div className="fixed inset-0 w-screen h-screen bg-black/50"></div>
+      <div className="absolute inset-0 w-full h-full bg-black/50"></div>
 
       {/* Затемнение по краям */}
-      <div className="fixed inset-0 w-screen h-screen bg-gradient-to-r from-black via-transparent to-black"></div>
+      <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-black via-transparent to-black"></div>
 
       {/* Размытие всего видео */}
-      <div className="fixed inset-0 w-screen h-screen bg-black/30 backdrop-blur-md"></div>
+      <div className="absolute inset-0 w-full h-full bg-black/30 backdrop-blur-md"></div>
 
       {/* Контент поверх видео */}
-      <div className="relative z-8 text-center p-4 sm:p-6">
+      <div className="relative z-10 text-center p-4 sm:p-6">
         <motion.h1
           className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-center tracking-wide text-white"
           variants={textVariants}

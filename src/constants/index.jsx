@@ -29,40 +29,40 @@ export const navItems = [
 
 export const testimonials = [
   {
-    user: "John Doe",
-    company: "Stellar Solutions",
+    user: "Анна Сергеева",
+    company: "Санкт-Петербург",
     image: user1,
-    text: "I am extremely satisfied with the services provided. The team was responsive, professional, and delivered results beyond my expectations.",
+    text: "Никогда не думала, что заказ автозапчастей может быть таким простым! Сломался автомобиль, а нужной детали в сервисе не оказалось. Друг посоветовал этого бота. Разобралась за пару минут, а уже через день запчасть была у меня! Очень удобно и быстро, рекомендую.",
   },
   {
-    user: "Jane Smith",
-    company: "Blue Horizon Technologies",
+    user: "Иван Коваленко",
+    company: "Новосибирск",
     image: user2,
-    text: "I couldn't be happier with the outcome of our project. The team's creativity and problem-solving skills were instrumental in bringing our vision to life",
+    text: "Уже третий раз заказываю через бота. Нужна была редкая деталь, в городе её нигде не нашёл. Бот нашёл за пару секунд и подсказал, где дешевле. Всё просто и чётко. Реально экономит время и деньги. Спасибо за такой сервис!",
   },
   {
-    user: "David Johnson",
-    company: "Quantum Innovations",
+    user: "Ольга Петрова",
+    company: "Санкт-Петербург",
     image: user3,
-    text: "Working with this company was a pleasure. Their attention to detail and commitment to excellence are commendable. I would highly recommend them to anyone looking for top-notch service.",
+    text: "Искала тормозные колодки, а в магазинах всё либо дорого, либо долго ждать. Сосед посоветовал бота, и я решила попробовать. За пару минут нашла нужный вариант по адекватной цене. Уже на следующий день всё доставили. Очень довольна!",
   },
   {
-    user: "Ronee Brown",
-    company: "Fusion Dynamics",
+    user: "Максим Зайцев",
+    company: "Новосибирск",
     image: user4,
-    text: "Working with the team at XYZ Company was a game-changer for our project. Their attention to detail and innovative solutions helped us achieve our goals faster than we thought possible. We are grateful for their expertise and professionalism!",
+    text: "Улетел в командировку, а жена звонит — что-то с аккумулятором. Времени искать не было, зашёл в бота и нашёл подходящий вариант за 5 минут. Пока я возвращался, ей уже всё привезли. Очень удобно! Всем советую.",
   },
   {
-    user: "Michael Wilson",
-    company: "Visionary Creations",
+    user: "Екатерина Смирнова",
+    company: "Санкт-Петербург",
     image: user5,
-    text: "I am amazed by the level of professionalism and dedication shown by the team. They were able to exceed our expectations and deliver outstanding results.",
+    text: "Срочно понадобился датчик, а в ближайших магазинах либо дорого, либо ждать неделю. Бот нашёл всё за 5 минут, а доставили уже на следующий день. Удобно, быстро, никаких лишних действий. Теперь заказываю только через него.",
   },
   {
-    user: "Emily Davis",
-    company: "Synergy Systems",
+    user: "Алексей Тихонов",
+    company: "Новосибирск",
     image: user6,
-    text: "The team went above and beyond to ensure our project was a success. Their expertise and dedication are unmatched. I look forward to working with them again in the future.",
+    text: "Машина встала прямо на трассе, нужен был ремень ГРМ. Позвонил друзьям, посоветовали попробовать бота. Заказал прямо с телефона, а уже на следующий день всё было у меня. Этот бот — находка для всех автомобилистов!",
   },
 ];
 
@@ -108,24 +108,46 @@ export const features = [
 
 export const checklistItems = [
   {
-    title: "Привлечение рекламодателей",
+    title: "Отсутствие конкуренции",
     description:
-      "Находите компании, чья аудитория – автолюбители: автосалоны, автосервисы, шиномонтажи, магазины «Охота, рыбалка» и т.д.",
+      "Весь программно-информационный комплекс полностью собственной разработки.",
   },
   {
-    title: "Получаете 85% от рекламного дохода.",
+    title: "Отсутствие доп. инвестиций",
     description:
-      "Презентуете клуб и договариваетесь о размещении рекламы.\n",
+      "В сравнении с другими предложениями всяких франшиз здесь не требуется никаких дополнительных вложений и усилий, нет необходимости в покупке какого-либо оборудования, аренды и ремонта помещений или найма специалистов.",
   },
   {
-    title: "Обслуживание членов клуба",
+    title: "Без трат на маркетинг, рекламу и прочих сложностей",
     description:
-      "Обрабатываете запросы участников (эвакуация, техобслуживание, скидки на заправках).",
+      "Привлечение и привязка новых членов клуба – это наша забота.",
   },
   {
-    title: "Перенаправляете запросы к партнерам",
+    title: "Бизнес предельно прост и не требует никакого обучения!",
     description:
-      "Автосервисам, шиномонтажам и другим.",
+      "Просто обрабатывайте заявки членов клуба и договаривайтесь с рекламодателями. С каждой размещенной рекламы – ваши 85%! Средний чек 25000р. Калькулятор ниже)↓",
+  },
+  {
+    title: "Возврат вложений всего 2-4 мес!",
+    description: "",
+  },
+  {
+    title: "Гарантированные доходы!",
+    description:
+      "По договору уже через 1-2 месяца и возврат взноса, если не выйдете на прибыль!",
+  },
+  {
+    title: "Гарантия возврата даже если передумали или не \"зашло\"!",
+    description:
+      "Т.к. на один регион/город лишь один представитель, а обычно поступает несколько заявок, мы возвращаем оплату, как только следующий заявитель завершает процесс оплаты.",
+  },
+  {
+    title: "Никаких платежей и отчислений до выхода на прибыль!",
+    description: "Пока не начнете зарабатывать, ничего не платите.",
+  },
+  {
+    title: "Открытие всего 1-2 мес.",
+    description: "С пошаговой поддержкой и сопровождением.",
   },
 ];
 

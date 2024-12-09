@@ -1,31 +1,82 @@
-import { CheckCircle2 } from "lucide-react";
-import codeImg from "../assets/code.png";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import {
+  Award,
+  PiggyBank,
+  ShoppingBag,
+  Smile,
+  TrendingUp,
+  ShieldCheck,
+  DollarSign,
+  Clock,
+} from "lucide-react";
 import { checklistItems } from "../constants";
+
+const icons = [
+  <Award key="award" />,
+  <PiggyBank key="piggybank" />,
+  <ShoppingBag key="shoppingbag" />,
+  <Smile key="smile" />,
+  <Clock key="clock1" />,
+  <TrendingUp key="trendingup" />,
+  <ShieldCheck key="shieldcheck" />,
+  <DollarSign key="dollarsign" />,
+  <Clock key="clock2" />,
+];
+
+const WorkflowItem = ({ icon, title, description, delay, isLast }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true }); // Элемент появляется только один раз
+
+  return (
+    <motion.div
+      ref={ref}
+      className="flex items-center mb-14"
+      initial={{ opacity: 0, x: -50 }}
+      animate={isInView ? { opacity: 1, x: 0 } : {}}
+      transition={{
+        duration: 0.5,
+        delay,
+      }}
+    >
+      {/* Иконка и соединительная линия */}
+      <div className="relative">
+        <div className="text-orange-500 bg-neutral-900 h-16 w-16 flex justify-center items-center rounded-full shadow-lg">
+          {icon}
+        </div>
+        {!isLast && (
+          <div className="absolute h-full w-0.5 left-1/2 transform -translate-x-1/2 bg-gradient-to-b from-orange-500 to-transparent mt-2"></div>
+        )}
+      </div>
+      {/* Текст */}
+      <div className="ml-8">
+        <h5 className="text-xl font-semibold mb-2">{title}</h5>
+        <p className="text-md text-neutral-500 leading-relaxed">{description}</p>
+      </div>
+    </motion.div>
+  );
+};
 
 const Workflow = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-20 z-10">
       <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide">
-        Что нужно{" "}
+        Наши{" "}
         <span className="bg-gradient-to-r from-orange-500 to-orange-800 text-transparent bg-clip-text">
-          делать?
+          преимущества
         </span>
       </h2>
-      <div className="flex flex-wrap justify-center mt-6">
-        <div className="p-2 w-full lg:w-1/2">
-          <img src={codeImg} alt="Coding" />
-        </div>
+      <div className="flex flex-wrap justify-center mt-12">
         <div className="pt-12 w-full lg:w-1/2">
           {checklistItems.map((item, index) => (
-            <div key={index} className="flex mb-12">
-              <div className="text-green-400 mx-6 bg-neutral-900 h-10 w-10 p-2 justify-center items-center rounded-full">
-                <CheckCircle2 />
-              </div>
-              <div>
-                <h5 className="mt-1 mb-2 text-xl">{item.title}</h5>
-                <p className="text-md text-neutral-500">{item.description}</p>
-              </div>
-            </div>
+            <WorkflowItem
+              key={index}
+              icon={icons[index]}
+              title={item.title}
+              description={item.description}
+              delay={index * 0.2}
+              isLast={index === checklistItems.length - 1} // Передаём флаг для последнего элемента
+            />
           ))}
         </div>
       </div>

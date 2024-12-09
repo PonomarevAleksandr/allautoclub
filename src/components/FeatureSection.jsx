@@ -56,8 +56,8 @@ const FeatureSection = () => {
 
   return (
     <div
-      id="feature-section"
-      className="relative mt-20 border-b border-neutral-800 min-h-[800px] px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden pb-12"
+      id="club"
+      className="relative mt-20 border-b border-neutral-800 min-h-[800px] px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden pb-20"
     >
       <motion.div
         ref={titleRef}
