@@ -1,22 +1,24 @@
 import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import FeatureSection from "./components/FeatureSection";
+import MainBlock from "./components/MainBlock.jsx";
+import FeaturesBlock from "./components/FeaturesBlock.jsx";
 import Workflow from "./components/Workflow";
-import Footer from "./components/Footer";
-import Pricing from "./components/Pricing";
+import Calculator from "./components/Calculator";
+import regions from "./constants/regions.json"
 import Testimonials from "./components/Testimonials";
 
 const App = () => {
     return (
         <>
             <Navbar />
-            <HeroSection/>
+            <MainBlock/>
             <div className="max-w-7xl mx-auto pt-20 z-9 px-6">
 
-                <FeatureSection/>
+                <FeaturesBlock/>
                 <Workflow/>
-                {/*<Pricing/>*/}
+                {/*<CardsBlock/>*/}
                 <Testimonials/>
+                <Calculator regions={regions} />
+
                 {/*<Footer/>*/}
             </div>
         </>

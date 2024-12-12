@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import video1 from "../assets/video2.mp4";
 
-const HeroSection = () => {
+const MainBlock = () => {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -109,4 +109,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default MainBlock;

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { features } from "../constants";
 
-const FeatureSection = () => {
+const FeaturesBlock = () => {
   const featureRefs = useRef([]);
   const [visibleFeatures, setVisibleFeatures] = useState([]);
   const [titleInView, setTitleInView] = useState(false);
@@ -105,4 +105,4 @@ const FeatureSection = () => {
   );
 };
 
-export default FeatureSection;
+export default FeaturesBlock;

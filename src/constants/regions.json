@@ -1,0 +1,18 @@
+{
+  "Москва": {
+    "population": 12600000,
+    "businesses": 200000
+  },
+  "Санкт-Петербург": {
+    "population": 5400000,
+    "businesses": 80000
+  },
+  "Новосибирск": {
+    "population": 1620000,
+    "businesses": 150000
+  },
+  "Екатеринбург": {
+    "population": 1490000,
+    "businesses": 25000
+  }
+}
