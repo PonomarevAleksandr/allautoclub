@@ -1,18 +1,202 @@
 {
-  "Москва": {
-    "population": 12600000,
-    "businesses": 200000
+  "Ленинградская область": {
+    "population": 2035762,
+    "businesses": 84776
   },
   "Санкт-Петербург": {
-    "population": 5400000,
-    "businesses": 80000
+    "population": 5597763,
+    "businesses": 377238
   },
-  "Новосибирск": {
-    "population": 1620000,
-    "businesses": 150000
+  "Республика Карелия": {
+    "population": 523856,
+    "businesses": 26414
   },
-  "Екатеринбург": {
-    "population": 1490000,
-    "businesses": 25000
+  "Псковская область": {
+    "population": 581147,
+    "businesses": 20354
+  },
+  "Новгородская область": {
+    "population": 571447,
+    "businesses": 21455
+  },
+  "Вологодская область": {
+    "population": 1121343,
+    "businesses": 47030
+  },
+  "Архангельская область": {
+    "population": 955848,
+    "businesses": 33982
+  },
+  "Республика Коми": {
+    "population": 720610,
+    "businesses": 25514
+  },
+  "Тверская область": {
+    "population": 1199747,
+    "businesses": 47972
+  },
+  "Смоленская область": {
+    "population": 863987,
+    "businesses": 39285
+  },
+  "Брянская область": {
+    "population": 1142404,
+    "businesses": 37448
+  },
+  "Ярославская область": {
+    "population": 1187558,
+    "businesses": 50785
+  },
+  "Калужская область": {
+    "population": 1068410,
+    "businesses": 44180
+  },
+  "Московская область": {
+    "population": 8651260,
+    "businesses": 457247
+  },
+  "Москва": {
+    "population": 13149803,
+    "businesses": 904632
+  },
+  "Костромская область": {
+    "population": 566266,
+    "businesses": 23341
+  },
+  "Ивановская область": {
+    "population": 905900,
+    "businesses": 43368
+  },
+  "Владимирская область": {
+    "population": 1309942,
+    "businesses": 52880
+  },
+  "Рязанская область": {
+    "population": 1082231,
+    "businesses": 42175
+  },
+  "Тульская область": {
+    "population": 1471140,
+    "businesses": 54769
+  },
+  "Орловская область": {
+    "population": 692486,
+    "businesses": 25268
+  },
+  "Курская область": {
+    "population": 1060892,
+    "businesses": 34689
+  },
+  "Белгородская область": {
+    "population": 1500659,
+    "businesses": 61418
+  },
+  "Липецкая область": {
+    "population": 1116265,
+    "businesses": 40215
+  },
+  "Тамбовская область": {
+    "population": 956292,
+    "businesses": 30658
+  },
+  "Воронежская область": {
+    "population": 2273417,
+    "businesses": 88505
+  },
+  "Республика Крым": {
+    "population": 1909499,
+    "businesses": 84520
+  },
+  "Краснодарский край": {
+    "population": 5833002,
+    "businesses": 308433
+  },
+  "Ростовская область": {
+    "population": 4152518,
+    "businesses": 183052
+  },
+  "Волгоградская область": {
+    "population": 2453898,
+    "businesses": 76225
+  },
+  "Астраханская область": {
+    "population": 946429,
+    "businesses": 30014
+  },
+  "Саратовская область": {
+    "population": 2385163,
+    "businesses": 77684
+  },
+  "Пензенская область": {
+    "population": 1236113,
+    "businesses": 46837
+  },
+  "Нижегородская область": {
+    "population": 3060335,
+    "businesses": 129978
+  },
+  "Самарская область": {
+    "population": 3127842,
+    "businesses": 134673
+  },
+  "Республика Татарстан": {
+    "population": 4003016,
+    "businesses": 178141
+  },
+  "Кировская область": {
+    "population": 1129935,
+    "businesses": 46847
+  },
+  "Республика Башкортостан": {
+    "population": 4064361,
+    "businesses": 141429
+  },
+  "Пермский край": {
+    "population": 2495266,
+    "businesses": 102427
+  },
+  "Оренбургская область": {
+    "population": 1828656,
+    "businesses": 62027
+  },
+  "Челябинская область": {
+    "population": 3395798,
+    "businesses": 144417
+  },
+  "Свердловская область": {
+    "population": 4222695,
+    "businesses": 212902
+  },
+  "Тюменская область": {
+    "population": 1615454,
+    "businesses": 76034
+  },
+  "Красноярский край": {
+    "population": 2846120,
+    "businesses": 112751
+  },
+  "Омская область": {
+    "population": 1818093,
+    "businesses": 65798
+  },
+  "Томская область": {
+    "population": 1043385,
+    "businesses": 41191
+  },
+  "Новосибирская область": {
+    "population": 2789532,
+    "businesses": 151998
+  },
+  "Алтайский край": {
+    "population": 2115308,
+    "businesses": 79016
+  },
+  "Кемеровская область": {
+    "population": 2547684,
+    "businesses": 71860
+  },
+  "Иркутская область": {
+    "population": 2330537,
+    "businesses": 90522
   }
 }
