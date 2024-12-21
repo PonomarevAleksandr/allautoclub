@@ -31,7 +31,7 @@ const FeaturesBlock = ({ featuresBlock }) => {
             setTitleInView(true);
           }
         },
-        { threshold: 0.5 }
+        { threshold: 0.2 }
     );
 
     if (titleRef.current) {
@@ -86,7 +86,7 @@ const FeaturesBlock = ({ featuresBlock }) => {
           {featuresBlock.features.map((feature, index) => (
               <motion.div
                   key={index}
-                  className="w-full sm:w-1/2 lg:w-1/3 px-4"
+                  className="w-full sm:w-full lg:w-1/3 px-4"
                   ref={(el) => (featureRefs.current[index] = el)}
                   data-index={index}
                   variants={itemVariants}

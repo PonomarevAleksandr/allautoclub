@@ -3,7 +3,7 @@ import { useState } from "react";
 import Calculator from "./Calculator";
 import Alternative from "./Alternative";
 
-const Franchise = ({ regions, franchiseContent, alternativeContent }) => {
+const Franchise = ({ regions, franchiseContent, alternativeContent , openModal}) => {
     const [activeTab, setActiveTab] = useState("representative");
 
     const tabVariants = {
@@ -13,7 +13,7 @@ const Franchise = ({ regions, franchiseContent, alternativeContent }) => {
     };
 
     return (
-        <div id="calc" className="relative flex flex-col items-center justify-center text-white mt-20 px-4">
+        <div className="relative flex flex-col items-center justify-center text-white mt-20 px-4">
             {/* Заголовок */}
             <motion.h1
                 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-center tracking-wide mb-10"
@@ -31,7 +31,7 @@ const Franchise = ({ regions, franchiseContent, alternativeContent }) => {
             </motion.h1>
 
             {/* Переключатель */}
-            <div className="relative flex items-center justify-between w-full max-w-md sm:max-w-lg h-14 bg-gray-900/50 backdrop-blur-md rounded-full shadow-lg px-1">
+            <div className="relative flex items-center justify-between w-full max-w-md sm:max-w-lg h-14 border border-neutral-700 bg-neutral-800  backdrop-blur-md rounded-full shadow-lg px-1">
                 {/* Фон активного таба */}
                 <motion.div
                     className="absolute top-1 bottom-1 rounded-full bg-gradient-to-r from-orange-500 to-red-600"
@@ -72,8 +72,8 @@ const Franchise = ({ regions, franchiseContent, alternativeContent }) => {
                 exit="exit"
                 variants={tabVariants}
             >
-                {activeTab === "representative" && <Calculator regions={regions} />}
-                {activeTab === "investor" && <Alternative content={alternativeContent} />}
+                {activeTab === "representative" && <Calculator openModal={openModal} regions={regions} />}
+                {activeTab === "investor" && <Alternative openModal={openModal} content={alternativeContent} />}
             </motion.div>
         </div>
     );

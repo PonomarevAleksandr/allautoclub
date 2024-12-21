@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import video1 from "../assets/video2.mp4";
 
-const MainBlock = ({ mainBlockContent }) => {
+const MainBlock = ({ mainBlockContent, openModal}) => {
     if (!mainBlockContent) return <div>Загрузка...</div>;
 
     return (
@@ -81,12 +81,12 @@ const MainBlock = ({ mainBlockContent }) => {
                     initial="hidden"
                     animate="visible"
                 >
-                    <a
-                        href="#"
+                    <button
+                        onClick={openModal}
                         className="bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 sm:py-3 sm:px-4 md:px-6 md:py-4 mx-2 sm:mx-3 rounded-md text-sm sm:text-base md:text-lg text-white shadow-lg"
                     >
                         {mainBlockContent.buttonText}
-                    </a>
+                    </button>
                 </motion.div>
             </div>
         </div>

@@ -8,7 +8,7 @@ const Navbar = ({ navbarContent }) => {
                 <a href="/#club" className="nav-item">{navbarContent.club}</a>
                 <a href="/#calc" className="nav-item">{navbarContent.calc}</a>
                 <a
-                    href="/#contacts"
+                    href="/#offer"
                     className="nav-item bg-orange-400 text-gray-900 hover:bg-white/70 hover:text-gray-900"
                 >
                     {navbarContent.contacts}
