@@ -20,7 +20,7 @@ const TestimonialCard = ({ testimonial, index, isMobile, hoveredIndex, handleMou
           onMouseLeave={!isMobile ? handleMouseLeave : null}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.2 }}
+          transition={{ duration: 0.4, ease: "easeOut", delay: index * 0.2 }}
       >
         <motion.div
             whileHover={!isMobile ? { scale: 1.05 } : {}}
@@ -72,13 +72,13 @@ const Testimonials = ({ testimonialsContent }) => {
   if (!testimonialsContent) return <div>Загрузка...</div>;
 
   return (
-      <div className="mt-20 tracking-wide">
+      <div className="mt-20 tracking-wide max-w-7xl mx-auto pt-20 px-6">
         <motion.h2
             className="text-3xl sm:text-4xl lg:text-6xl text-center my-10 lg:my-20 px-4"
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
         >
           {testimonialsContent.title}
         </motion.h2>
